@@ -5,6 +5,9 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  // @ts-expect-error yep, we are going to get an error
+  window.electron.getStaticData();
+
   return (
     <>
       <div>
